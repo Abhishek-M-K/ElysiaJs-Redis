@@ -2,15 +2,17 @@
   "name": "elysia-snippet",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "test": "vitest run",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile ./dist/server ./src/index.ts"
   },
   "dependencies": {
     "elysia": "latest",
     "ioredis": "^5.4.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "vitest": "^3.0.1"
   },
   "module": "src/index.js"
 }
